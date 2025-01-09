@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-dark: #0f1215;
+  --color-light: #ffffff;
+}
+
+* {
+  font-family: "satos";
+}
+
+@font-face {
+  font-family: "satos";
+  src: url("./assets/fonts/satovariable.ttf");
+}
+
+.btn-default {
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+  }
+}
