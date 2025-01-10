@@ -11,6 +11,10 @@
   font-family: "satos";
 }
 
+*::-webkit-scrollbar {
+  display: none;
+}
+
 @font-face {
   font-family: "satos";
   src: url("./assets/fonts/satovariable.ttf");
@@ -21,5 +25,134 @@
   &:hover {
     background-color: var(--color-light);
     color: var(--color-dark);
+  }
+}
+
+/* .button1 {
+  line-height: 1;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  border-radius: 10rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  padding-left: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: background-color 0.3s;
+}
+
+.button1__icon-wrapper {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  color: var(--color-light);
+  background-color: var(--color-dark);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.button1:hover {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+.button1:hover .button1__icon-wrapper {
+  color: var(--color-dark);
+  background-color: var(--color-light);
+}
+
+.button1__icon-svg--copy {
+  position: absolute;
+  transform: translate(-150%, 150%);
+}
+
+.button1:hover .button1__icon-svg:first-child {
+  transition: transform 0.3s ease-in-out;
+  transform: translate(150%, -150%);
+}
+
+.button1:hover .button1__icon-svg--copy {
+  transition: transform 0.3s ease-in-out 0.1s;
+  transform: translate(0);
+} */
+
+.button1 {
+  line-height: 1;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  border-radius: 10rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  padding-left: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: background-color 0.3s;
+
+  /* Adjustments for smaller screens */
+  font-size: 0.875rem; /* Adjust font size for better scaling on small screens */
+}
+
+.button1__icon-wrapper {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  color: var(--color-light);
+  background-color: var(--color-dark);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.button1:hover {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+.button1:hover .button1__icon-wrapper {
+  color: var(--color-dark);
+  background-color: var(--color-light);
+}
+
+.button1__icon-svg--copy {
+  position: absolute;
+  transform: translate(-150%, 150%);
+}
+
+.button1:hover .button1__icon-svg:first-child {
+  transition: transform 0.3s ease-in-out;
+  transform: translate(150%, -150%);
+}
+
+.button1:hover .button1__icon-svg--copy {
+  transition: transform 0.3s ease-in-out 0.1s;
+  transform: translate(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .button1 {
+    gap: 0.5rem; /* Reduce gap between elements for smaller screens */
+    padding: 0.5rem 1rem; /* Reduce padding for better fit on smaller screens */
+    font-size: 0.75rem; /* Further reduce font size for compact appearance */
+  }
+
+  .button1__icon-wrapper {
+    width: 16px;
+    height: 16px; /* Adjust icon size for smaller screens */
   }
 }
