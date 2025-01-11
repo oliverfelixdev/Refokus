@@ -10,7 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "framer-motion": "^11.17.0",
     "gsap": "^3.12.5",
+    "lenis": "^1.1.19",
+    "locomotive-scroll": "^5.0.0-beta.21",
+    "motion": "^11.17.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.4.0",

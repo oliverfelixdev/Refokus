@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+
 const Home = () => {
-  let images = [
+  const [images, setImages] = useState([
     {
       url: "./src/assets/media/tr1.png",
       top: "50%",
@@ -35,9 +37,32 @@ const Home = () => {
       url: "./src/assets/media/tr6.png",
       top: "50%",
       left: "50%",
-      isActive: true,
+      isActive: false,
     },
-  ];
+  ]);
+
+  const { scrollYProgress } = useScroll();
+  const scaleFactor = 1.5;
+
+  scrollYProgress.on("change", (data) => {
+    const scaledPercentage = Math.floor((data * 100) / scaleFactor);
+
+    function imagesShow(indices) {
+      setImages((prev) =>
+        prev.map((item, index) => ({
+          ...item,
+          isActive: indices.includes(index),
+        }))
+      );
+    }
+
+    const activeIndices = Array.from(
+      { length: Math.min(scaledPercentage - 1, images.length) },
+      (_, i) => i
+    );
+    imagesShow(activeIndices);
+  });
+
   return (
     <div className="w-full min-h-screen pt-px relative select-none">
       <div className="wrap w-full relative">
@@ -54,7 +79,7 @@ const Home = () => {
               Refokus is a top Webflow Agency combining high-end design with
               Webflow <br /> Development expertise.
             </p>
-            <div className="imageOnScroll h-64 w-64 bg-lime-100 rounded relative">
+            <div className="imageOnScroll h-64 w-64 rounded relative">
               {images.map(
                 (elem, index) =>
                   elem.isActive && (

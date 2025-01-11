@@ -9,6 +9,7 @@
 
 * {
   font-family: "satos";
+  user-select: none;
 }
 
 *::-webkit-scrollbar {
@@ -20,6 +21,10 @@
   src: url("./assets/fonts/satovariable.ttf");
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .btn-default {
   transition: all 0.3s ease;
   &:hover {
@@ -28,61 +33,12 @@
   }
 }
 
-/* .button1 {
-  line-height: 1;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  background-color: var(--color-light);
-  color: var(--color-dark);
-  border-radius: 10rem;
-  font-weight: 600;
-  padding: 0.75rem 1.5rem;
-  padding-left: 20px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  transition: background-color 0.3s;
+.productOnly {
+  transition: all 0.7s cubic-bezier(0.87, 0, 0.13, 1);
+  &:hover {
+    padding-bottom: 2.4vw;
+  }
 }
-
-.button1__icon-wrapper {
-  flex-shrink: 0;
-  width: 20px;
-  height: 20px;
-  position: relative;
-  color: var(--color-light);
-  background-color: var(--color-dark);
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-}
-
-.button1:hover {
-  background-color: var(--color-dark);
-  color: var(--color-light);
-}
-
-.button1:hover .button1__icon-wrapper {
-  color: var(--color-dark);
-  background-color: var(--color-light);
-}
-
-.button1__icon-svg--copy {
-  position: absolute;
-  transform: translate(-150%, 150%);
-}
-
-.button1:hover .button1__icon-svg:first-child {
-  transition: transform 0.3s ease-in-out;
-  transform: translate(150%, -150%);
-}
-
-.button1:hover .button1__icon-svg--copy {
-  transition: transform 0.3s ease-in-out 0.1s;
-  transform: translate(0);
-} */
 
 .button1 {
   line-height: 1;
@@ -100,15 +56,13 @@
   overflow: hidden;
   text-overflow: ellipsis;
   transition: background-color 0.3s;
-
-  /* Adjustments for smaller screens */
-  font-size: 0.875rem; /* Adjust font size for better scaling on small screens */
+  font-size: 0.875rem;
 }
 
 .button1__icon-wrapper {
   flex-shrink: 0;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   position: relative;
   color: var(--color-light);
   background-color: var(--color-dark);
@@ -134,25 +88,63 @@
 }
 
 .button1:hover .button1__icon-svg:first-child {
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.6s cubic-bezier(0.87, 0, 0.13, 1);
   transform: translate(150%, -150%);
 }
 
 .button1:hover .button1__icon-svg--copy {
-  transition: transform 0.3s ease-in-out 0.1s;
+  transition: transform 0.6s cubic-bezier(0.87, 0, 0.13, 1);
   transform: translate(0);
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .button1 {
-    gap: 0.5rem; /* Reduce gap between elements for smaller screens */
-    padding: 0.5rem 1rem; /* Reduce padding for better fit on smaller screens */
-    font-size: 0.75rem; /* Further reduce font size for compact appearance */
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
   }
 
   .button1__icon-wrapper {
     width: 16px;
-    height: 16px; /* Adjust icon size for smaller screens */
+    height: 16px;
   }
+}
+
+/* OliverFelixAnimation */
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animation-span {
+  display: block;
+  transition: transform 0.5s ease-in-out;
+}
+
+.animation-span-hidden {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+}
+
+a:hover .animation-span {
+  animation: slideUp 0.5s forwards;
+}
+
+a:hover .animation-span-hidden {
+  animation: slideDown 0.5s forwards;
 }
