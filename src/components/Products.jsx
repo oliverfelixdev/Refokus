@@ -63,31 +63,37 @@ const Products = () => {
       {products.map((elem, index) => (
         <Product elem={elem} mover={mover} count={index} key={index} />
       ))}
-      <div className="h-full w-full hidden md:block absolute -top-3 pointer-events-none">
+      <div className="h-full w-full hidden md:block absolute -top-3 pointer-events-none ">
         {/* i have to apply the effect on this one */}
         <motion.div
           initial={{ y: pos }}
           animate={{ y: pos + `rem` }}
           transition={{ ease: [0.16, 1, 0.3, 1], duration: 0.6 }}
-          className="window absolute w-[30rem] h-[18.5rem] left-1/4 top-0 rounded-lg overflow-hidden"
-          style={{ scale: 1.15 }}
+          className="window absolute w-[30rem] h-[18.5rem] left-[22%] top-0 rounded-lg overflow-hidden "
+          style={{ scale: 1.1 }}
         >
+          <div className="skeleton-loading absolute top-0 left-0 z-10"></div>
           {vIDS.map((item, i) => (
             <motion.div
               key={i}
               animate={{ y: -pos + `rem` }}
               transition={{ ease: [0.16, 1, 0.3, 1], duration: 0.3 }}
-              className="w-full h-full"
+              className="w-full h-full relative z-30"
             >
               <video
                 loop
                 autoPlay
                 muted
                 src={item.vid}
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover "
               ></video>
             </motion.div>
           ))}
+          {/*<div className="bg-white/20 backdrop-blur-md border border-white/30 shadow-md shadow-black/10 px-4 py-1 rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 animate-pulse flex items-center justify-center">
+            <span className="text-white text-sm font-medium text-center tracking-wide">
+              Loading
+            </span>
+          </div> */}
         </motion.div>
       </div>
     </div>

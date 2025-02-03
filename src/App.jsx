@@ -18,7 +18,7 @@ const App = () => {
     return () => cancelAnimationFrame(rafId);
   }, []);
   return (
-    <ReactLenis root options={{ lerp: 0.09 }}>
+    <ReactLenis root options={{ lerp: 0.08 }}>
       <div className="w-full min-h-screen bg-[var(--color-dark)] text-[var(--color-light)]">
         <Navigation />
         <Home />

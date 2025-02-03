@@ -98,13 +98,13 @@ const Sidebar = ({ isVisible, onClose }) => {
       gsap.to(sidebarEl, {
         x: 0,
         duration: 1,
-        ease: Expo.easeInOut,
+        ease: "expo.out",
       });
     } else {
       gsap.to(sidebarEl, {
         x: "-120%",
         duration: 1.5,
-        ease: Expo.easeInOut,
+        ease: "expo.out",
       });
     }
   }, [isVisible]);
@@ -113,7 +113,7 @@ const Sidebar = ({ isVisible, onClose }) => {
     <div
       ref={sidebarRef}
       style={{ transform: "translateX(-120%)", marginLeft: "0.75%" }}
-      className="h-full md:h-[97%] w-full md:w-1/3 bg-[var(--color-dark)] text-white p-5 border-y border-x border-zinc-600 rounded-lg fixed top-[1.5%] z-20 overflow-auto"
+      className="sidebar h-full md:h-[97%] w-full md:w-1/3 bg-[var(--color-dark)] text-white p-5 border-y border-x border-zinc-600 rounded-lg fixed top-[1.5%] z-20 overflow-auto"
     >
       <div className="wrap h-full w-full">
         {/* Close Icon Top */}

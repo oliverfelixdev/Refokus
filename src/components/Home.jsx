@@ -4,37 +4,37 @@ import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 const Home = () => {
   const [images, setImages] = useState([
     {
-      url: "./src/assets/media/tr1.png",
+      url: "/assets/media/tr1.png",
       top: "50%",
       left: "50%",
       isActive: false,
     },
     {
-      url: "./src/assets/media/tr2.png",
+      url: "/assets/media/tr2.png",
       top: "54%",
       left: "53%",
       isActive: false,
     },
     {
-      url: "./src/assets/media/tr3.png",
+      url: "/assets/media/tr3.png",
       top: "58%",
       left: "48%",
       isActive: false,
     },
     {
-      url: "./src/assets/media/tr4.png",
+      url: "/assets/media/tr4.png",
       top: "50%",
       left: "45%",
       isActive: false,
     },
     {
-      url: "./src/assets/media/tr5.png",
+      url: "/assets/media/tr5.png",
       top: "45%",
       left: "55%",
       isActive: false,
     },
     {
-      url: "./src/assets/media/tr6.png",
+      url: "/assets/media/tr6.png",
       top: "50%",
       left: "50%",
       isActive: false,
