@@ -46,19 +46,19 @@ const Sidebar = ({ isVisible, onClose }) => {
   }, [expandedSection]);
   const serviceImgs = [
     {
-      imgSrc: "./src/assets/media/sidebarIconImage1.webp",
+      imgSrc: "/assets/media/sidebarIconImage1.webp",
       altText: "Target Not Found",
       title: "Web Design",
       description: "High-end design that captivates and converts.",
     },
     {
-      imgSrc: "./src/assets/media/sidebarIconImage2.webp",
+      imgSrc: "/assets/media/sidebarIconImage2.webp",
       altText: "Target Not Found",
       title: "WebFlow Development",
       description: "Fast and scalable sites with the power of Webflow.",
     },
     {
-      imgSrc: "./src/assets/media/sidebarIconImage3.webp",
+      imgSrc: "/assets/media/sidebarIconImage3.webp",
       altText: "Target Not Found",
       title: "Creative Development",
       description: "Blending storytelling with immersive experiences.",
@@ -66,25 +66,25 @@ const Sidebar = ({ isVisible, onClose }) => {
   ];
   const solutionImgs = [
     {
-      imgSrc: "./src/assets/media/sidebarIconImage1.webp",
+      imgSrc: "/assets/media/sidebarIconImage1.webp",
       altText: "Target Not Found",
       title: "Startups",
       description: "Stand out and scale with ease.",
     },
     {
-      imgSrc: "./src/assets/media/sidebarIconImage4.webp",
+      imgSrc: "/assets/media/sidebarIconImage4.webp",
       altText: "Target Not Found",
       title: "Enterprise",
       description: "Modern solutions that keep you ahead.",
     },
     {
-      imgSrc: "./src/assets/media/sidebarIconImage5.webp",
+      imgSrc: "/assets/media/sidebarIconImage5.webp",
       altText: "Target Not Found",
       title: "Venture Capital",
       description: "Custom sites for your unique vision.",
     },
     {
-      imgSrc: "./src/assets/media/sidebarIconImage6.webp",
+      imgSrc: "/assets/media/sidebarIconImage6.webp",
       altText: "Target Not Found",
       title: "Marketing Campaigns",
       description: "Websites that convert and engage.",
